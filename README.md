@@ -1,6 +1,22 @@
 # Rolling Cosmetics
 * Se trabajara en español
 * No tocar la rama prinicpal (main) todos se debe trabajar en ramas separadas y mergear en la rama develop
+# Estructura de datos 
+## Producto
+- id
+- nombre
+- stock
+- precio
+- descripción
+- imagen
+- categoría
+- marca
+## Usuarios
+- id
+- Nombre
+- Apellidos
+- email
+- contraseña
 # Estructura de carpetas
 	rollingcosmetics/
     ├── public
