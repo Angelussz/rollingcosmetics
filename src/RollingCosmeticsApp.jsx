@@ -1,7 +1,10 @@
-import React from 'react'
+import Administracion from "./components/pages/Administracion";
 
-export const RollingCosmeticsApp = () => {
+const RollingCosmeticsApp = () => {
   return (
-    <div>RollingCosmeticsApp</div>
+    // <div>RollingCosmeticsApp</div>
+    <Administracion/>
   )
 }
+
+export default RollingCosmeticsApp;
