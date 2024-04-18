@@ -1,0 +1,67 @@
+{
+    "productos": [
+        {
+            "id": "84e5",
+            "categoria": "facial",
+            "nombre": "Pinta labio",
+            "marca": "Pantene",
+            "precio": "4.399,99",
+            "stock": "20",
+            "urlImagen": "https://media.istockphoto.com/id/164505409/es/foto/l%C3%A1piz-labial-rojo.jpg?s=612x612&w=0&k=20&c=eNdOKL6P787wz0DYjOYN6rqjW6CAmDr1OJAS-BvCJu0=",
+            "descripcion": "Pinta labio rojo"
+          },
+          {
+            "id": "268d",
+            "categoria": "maquillaje",
+            "nombre": "Labial líquido",
+            "marca": "L´Oréal",
+            "precio": "2.999,99",
+            "stock": "20",
+            "urlImagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "Labial líquido rosa"
+          },
+          {
+            "id": "4f39",
+            "categoria": "facial",
+            "nombre": "L\"f\"opo",
+            "marca": "ernieri",
+            "precio": "2,00",
+            "stock": "23",
+            "urlImagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "dinendenrfi"
+          },
+          {
+            "id": "3115",
+            "categoria": "facial",
+            "nombre": "kjn´jhd´we",
+            "marca": "ednier",
+            "precio": "2.332,22",
+            "stock": "1",
+            "urlImagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "sxhxhhxhxhhxhx"
+          }
+    ],
+    "usuarios": [
+          {
+            "id": "87h7",
+            "nombre": "Angelo",
+            "apellido": "Perez",
+            "email": "angelo@gmail.com",
+            "rol": "Admin"
+          },
+          {
+            "id": "8aq5",
+            "nombre": "Juan",
+            "apellido": "Illa",
+            "email": "juan@gmail.com",
+            "rol": "User"
+          },
+          {
+            "id": "81e5",
+            "nombre": "Facundo",
+            "apellido": "Palacios",
+            "email": "facundo@gmail.com",
+            "rol": "User"
+          }
+    ]
+}
