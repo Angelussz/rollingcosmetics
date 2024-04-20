@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import RollingCosmeticsApp from './RollingCosmeticsApp'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import RollingCosmeticsApp from "./RollingCosmeticsApp";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RollingCosmeticsApp /> 
-  </React.StrictMode>,
-)
+    <BrowserRouter>
+      <RollingCosmeticsApp />
+    </BrowserRouter>
+  </React.StrictMode>
+);
