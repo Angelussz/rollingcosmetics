@@ -1,0 +1,11 @@
+.t-links{
+    width: 50px;
+    height: 50px;
+}
+.t-logo{
+    width: 100px;
+    height: 100%;
+}
+.gradiente{
+    background: linear-gradient(0deg, black, white 160%) no-repeat;
+}
