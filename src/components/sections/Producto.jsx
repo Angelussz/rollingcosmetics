@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router";
+import BorrarProducto from "./BorrarProducto/BorrarProducto";
 
-const Producto = ({ producto }) => {
+const Producto = ({ producto, getProducto }) => {
     const navigate = useNavigate();
 
     return (
@@ -19,6 +20,7 @@ const Producto = ({ producto }) => {
                 <div>
                     <Button type="button" variant="warning" onClick={()=>{ navigate(`/editar/${producto._id}`) }}>Editar</Button>
                     <Button type="button" variant="danger">Borrar</Button>
+                    <BorrarProducto id={producto._id} getProducto={getProducto} />
                 </div>
             </td>
         </tr>
