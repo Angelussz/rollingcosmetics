@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Destacados, Home, EditarProducto } from "../components/pages";
+import { Destacados, Home, EditarProducto, Favoritos, Busqueda,DetallesProducto } from "../components/pages";
 import { RutasProtegida } from "./RutasProtegida";
 import Administracion from "../components/pages/Administracion";
-import { Favoritos } from "../components/pages/Favoritos";
 export const RutaAplicacion = () => {
   const [usuario, setUsuario] = useState({
     id: 1,
@@ -19,6 +18,8 @@ export const RutaAplicacion = () => {
         <Route index element={<Home />} />
         <Route path="/destacados" element={<Destacados />} />
         <Route path="/Contacto" element={<Destacados />} />
+        <Route path="/detalles/:id" element={<DetallesProducto />} />
+        <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route
           element={
             <RutasProtegida

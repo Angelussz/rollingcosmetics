@@ -9,3 +9,16 @@
 .gradiente{
     background: linear-gradient(0deg, black, white 160%) no-repeat;
 }
+.enlace-producto{
+    color: var(--color-800);
+    border: 1px var(--color-800) solid;
+}
+.card-producto{
+    border: 1px var(--color-500) solid;
+}
+.bg-modal-color-header{
+    background-color: var(--color-300);
+}
+.bg-modal-color-body{
+    background-color: var(--color-200);
+}
