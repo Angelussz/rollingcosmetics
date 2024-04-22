@@ -67,7 +67,7 @@ const ListaProductos = () => {
                         {
                             productos.map((producto)=>{
                                 return (
-                                    <Producto key={producto.id} producto={producto} />
+                                    <Producto key={producto._id} producto={producto} />
                                 )
                             })
                         }
