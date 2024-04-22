@@ -45,7 +45,7 @@ const CrearProducto = () => {
                 .min(1, "Debe haber mínimo 1 en stock")
                 .max(9999, "La cantidad máxima en stock para un producto es de 9999")
                 .required("Debe ingresar la cantidad en stock del producto"),
-            urlImagen: Yup.string()
+            imagen: Yup.string()
                 .trim()
                 .url("Ingrese una URL válida")
                 .min(10, "La URL debe tener al menos 10 caracteres")
@@ -65,7 +65,7 @@ const CrearProducto = () => {
         marca: "",
         precio: "",
         stock: "",
-        urlImagen: "",
+        imagen: "",
         descripcion: ""
     };
 
@@ -240,27 +240,27 @@ const CrearProducto = () => {
                             </div>
                         )}
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="urlImagenProducto">
+                <Form.Group className="mb-3" controlId="imagenProducto">
                     <Form.Label>URL de la imagen del producto:</Form.Label>
                     <Form.Control 
                         type="text" 
                         placeholder="Ingrese la dirección de la imagen" 
                         minLength={10} 
                         maxLength={400} 
-                        name="urlImagen"
-                        {...formik.getFieldProps("urlImagen")}
+                        name="imagen"
+                        {...formik.getFieldProps("imagen")}
                         className={clsx("form-control",
                         {
-                            "is-invalid": formik.touched.urlImagen && formik.errors.urlImagen,
+                            "is-invalid": formik.touched.imagen && formik.errors.imagen,
                         },
                         {
-                            "is-valid": formik.touched.urlImagen && !formik.errors.urlImagen,
+                            "is-valid": formik.touched.imagen && !formik.errors.imagen,
                         }
                         )}
                     />
-                        {formik.touched.urlImagen && formik.errors.urlImagen && (
+                        {formik.touched.imagen && formik.errors.imagen && (
                             <div className="text-danger">
-                                <span role="alert">{formik.errors.urlImagen}</span>
+                                <span role="alert">{formik.errors.imagen}</span>
                             </div>
                         )}
                 </Form.Group>
