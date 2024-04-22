@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router";
-import BorrarProducto from "./BorrarProducto/BorrarProducto";
+import BorrarProducto from "./BorrarProducto";
 
 const Producto = ({ producto, getProducto }) => {
     const navigate = useNavigate();
