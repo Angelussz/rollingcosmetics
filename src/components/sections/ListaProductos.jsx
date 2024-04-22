@@ -2,11 +2,13 @@
 import { Table, Row, Col, Button } from 'react-bootstrap';
 import Producto from "./Producto";
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router";
 
 
 const ListaProductos = () => {
     const API = import.meta.env.VITE_API;
     const [productos,setProductos] = useState([]);
+    const navigate = useNavigate();
 
     const getProducto = async () => {
         try {
@@ -39,7 +41,7 @@ const ListaProductos = () => {
                             <Button 
                                 variant="primary"
                                 onClick={()=>{
-                                    // navigate("/crear-producto")
+                                    navigate("/crear-producto")
                                 }}
                             >
                                 Guardar Producto

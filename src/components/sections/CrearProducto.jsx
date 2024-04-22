@@ -4,14 +4,14 @@ import { clsx } from "clsx";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import Swal from 'sweetalert2';
-// import { useNavigate } from 'react-router';  // para cuando esté el navbar
+import { useNavigate } from 'react-router'; 
 import axios from "axios";
 
 
 const CrearProducto = () => {
     const API = import.meta.env.VITE_API;
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const ProductosSchema = Yup.object().shape(
         {
@@ -85,7 +85,7 @@ const CrearProducto = () => {
                     confirmButtonText: "Guardar"
                 }).then( async(result) => {
                     if (result.isConfirmed) {
-                        const response = await axios.post(`${API}/products`, values);   
+                        const response = await axios.post(`${API}/productos`, values);   
 
                         if (response.status === 201) {  
                             formik.resetForm();    
@@ -110,11 +110,11 @@ const CrearProducto = () => {
         <div className="container-sm py-5">
             <Button 
                 variant="secondary" 
-                // onClick={()=>
-                    // navigate(-1)  
-                // }
+                onClick={()=>
+                    navigate(-1)  
+                }
             >
-                Atrás
+                Volver
             </Button>
             <h1 className="display-5 text-center">Nuevo Producto</h1>
             <Form onSubmit={formik.handleSubmit}>
