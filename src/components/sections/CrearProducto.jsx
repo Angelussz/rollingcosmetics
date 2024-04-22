@@ -134,9 +134,10 @@ const CrearProducto = () => {
                         )}
                     >
                         <option value="">Elija una categoría</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="cabello">Cabello</option>
+                        <option value="rostro">Rostro</option>
+                        <option value="cuerpo">Cuerpo</option>
+                        <option value="perfumeria">Perfumeria</option>
                     </Form.Select>
                     {formik.touched.categoria && formik.errors.categoria && (
                             <div className="text-danger">
