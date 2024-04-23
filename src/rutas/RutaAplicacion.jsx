@@ -17,9 +17,11 @@ export const RutaAplicacion = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/destacados" element={<Destacados />} />
-        <Route path="/Contacto" element={<Destacados />} />
         <Route path="/detalles/:id" element={<DetallesProducto />} />
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
+
+        <Route path="/contacto" element={<Destacados />} />
+
         <Route
           element={
             <RutasProtegida
