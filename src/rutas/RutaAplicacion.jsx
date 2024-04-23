@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Destacados, Home, EditarProducto } from "../components/pages";
+import { Destacados, Home, EditarProducto, Administracion, Favoritos, Contacto, DescripcionProducto } from "../components/pages";
+import CrearProducto from "../components/sections/CrearProducto";
 import { RutasProtegida } from "./RutasProtegida";
-import Administracion from "../components/pages/Administracion";
-import { Favoritos } from "../components/pages/Favoritos";
+
+import PruebaDescripcion from "../components/pages/PruebaDescripcion";
+
 export const RutaAplicacion = () => {
   const [usuario, setUsuario] = useState({
     id: 1,
@@ -18,7 +20,9 @@ export const RutaAplicacion = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/destacados" element={<Destacados />} />
-        <Route path="/contacto" element={<Destacados />} />
+        <Route path="/contacto" element={<Contacto/>} />
+        <Route path="/descripcion" element={<DescripcionProducto />} />
+        <Route path="/descripcionPrueba" element={<PruebaDescripcion />} />
         <Route
           element={
             <RutasProtegida
@@ -26,6 +30,7 @@ export const RutaAplicacion = () => {
             />
           }
         >
+          <Route path="/crear-producto" element={<CrearProducto />} />
           <Route path="/administracion" element={<Administracion />} />
           <Route path="/editar/:id" element={<EditarProducto />} />
         </Route>
