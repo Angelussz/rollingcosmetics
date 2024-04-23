@@ -4,14 +4,14 @@ import { clsx } from "clsx";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import Swal from 'sweetalert2';
-// import { useNavigate } from 'react-router';  // para cuando esté el navbar
+import { useNavigate } from 'react-router'; 
 import axios from "axios";
 
 
 const CrearProducto = () => {
     const API = import.meta.env.VITE_API;
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const ProductosSchema = Yup.object().shape(
         {
@@ -45,7 +45,7 @@ const CrearProducto = () => {
                 .min(1, "Debe haber mínimo 1 en stock")
                 .max(9999, "La cantidad máxima en stock para un producto es de 9999")
                 .required("Debe ingresar la cantidad en stock del producto"),
-            urlImagen: Yup.string()
+            imagen: Yup.string()
                 .trim()
                 .url("Ingrese una URL válida")
                 .min(10, "La URL debe tener al menos 10 caracteres")
@@ -65,7 +65,7 @@ const CrearProducto = () => {
         marca: "",
         precio: "",
         stock: "",
-        urlImagen: "",
+        imagen: "",
         descripcion: ""
     };
 
@@ -85,7 +85,7 @@ const CrearProducto = () => {
                     confirmButtonText: "Guardar"
                 }).then( async(result) => {
                     if (result.isConfirmed) {
-                        const response = await axios.post(`${API}/products`, values);   
+                        const response = await axios.post(`${API}/productos`, values);   
 
                         if (response.status === 201) {  
                             formik.resetForm();    
@@ -110,11 +110,11 @@ const CrearProducto = () => {
         <div className="container-sm py-5">
             <Button 
                 variant="secondary" 
-                // onClick={()=>
-                    // navigate(-1)  
-                // }
+                onClick={()=>
+                    navigate(-1)  
+                }
             >
-                Atrás
+                Volver
             </Button>
             <h1 className="display-5 text-center">Nuevo Producto</h1>
             <Form onSubmit={formik.handleSubmit}>
@@ -134,9 +134,10 @@ const CrearProducto = () => {
                         )}
                     >
                         <option value="">Elija una categoría</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="cabello">Cabello</option>
+                        <option value="rostro">Rostro</option>
+                        <option value="cuerpo">Cuerpo</option>
+                        <option value="perfumeria">Perfumeria</option>
                     </Form.Select>
                     {formik.touched.categoria && formik.errors.categoria && (
                             <div className="text-danger">
@@ -240,27 +241,27 @@ const CrearProducto = () => {
                             </div>
                         )}
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="urlImagenProducto">
+                <Form.Group className="mb-3" controlId="imagenProducto">
                     <Form.Label>URL de la imagen del producto:</Form.Label>
                     <Form.Control 
                         type="text" 
                         placeholder="Ingrese la dirección de la imagen" 
                         minLength={10} 
                         maxLength={400} 
-                        name="urlImagen"
-                        {...formik.getFieldProps("urlImagen")}
+                        name="imagen"
+                        {...formik.getFieldProps("imagen")}
                         className={clsx("form-control",
                         {
-                            "is-invalid": formik.touched.urlImagen && formik.errors.urlImagen,
+                            "is-invalid": formik.touched.imagen && formik.errors.imagen,
                         },
                         {
-                            "is-valid": formik.touched.urlImagen && !formik.errors.urlImagen,
+                            "is-valid": formik.touched.imagen && !formik.errors.imagen,
                         }
                         )}
                     />
-                        {formik.touched.urlImagen && formik.errors.urlImagen && (
+                        {formik.touched.imagen && formik.errors.imagen && (
                             <div className="text-danger">
-                                <span role="alert">{formik.errors.urlImagen}</span>
+                                <span role="alert">{formik.errors.imagen}</span>
                             </div>
                         )}
                 </Form.Group>

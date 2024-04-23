@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 const Usuario = ({ usuario }) => {
     return (
         <tr>
-            <td>{usuario.id}</td>
+            <td>{usuario._id}</td>
             <td>{usuario.nombre}</td>
             <td>{usuario.apellido}</td>
             <td>{usuario.email}</td>
