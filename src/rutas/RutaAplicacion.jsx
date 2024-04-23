@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Destacados, Home, EditarProducto, Administracion, Favoritos, Contacto, DescripcionProducto } from "../components/pages";
+import { Destacados, Home, EditarProducto, Favoritos, Busqueda, Administracion, Contacto, DescripcionProducto } from "../components/pages";
 import CrearProducto from "../components/sections/CrearProducto";
 import { RutasProtegida } from "./RutasProtegida";
 
-import PruebaDescripcion from "../components/pages/PruebaDescripcion";
+import PruebaDescripcion from "../components/pages/PruebaDescripcion";    /* BORRAR */
 
 export const RutaAplicacion = () => {
   const [usuario, setUsuario] = useState({
@@ -20,9 +20,12 @@ export const RutaAplicacion = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/destacados" element={<Destacados />} />
+        <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
-        <Route path="/descripcion" element={<DescripcionProducto />} />
-        <Route path="/descripcionPrueba" element={<PruebaDescripcion />} />
+        <Route path="/descripcion/:id" element={<DescripcionProducto />} />
+
+        <Route path="/descripcionPrueba" element={<PruebaDescripcion />} />  {/* BORRAR */}
+
         <Route
           element={
             <RutasProtegida
