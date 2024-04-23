@@ -49,7 +49,7 @@ const ListaUsuarios = () => {
                         {
                             usuarios.map((usuario)=>{
                                 return (
-                                    <Usuario key={usuario.id} usuario={usuario} />
+                                    <Usuario key={usuario._id} usuario={usuario} />
                                 )
                             })
                         }

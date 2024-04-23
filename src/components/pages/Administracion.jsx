@@ -1,10 +1,7 @@
 import ListaProductos from "../sections/ListaProductos";
 import ListaUsuarios from "../sections/ListaUsuarios";
 
-// import { useNavigate } from "react-router";
-
 const Administracion = () => {
-    // const navigate = useNavigate();
 
     return (
         <div>
