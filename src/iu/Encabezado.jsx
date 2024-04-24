@@ -8,6 +8,7 @@ import { IoSearchSharp } from "react-icons/io5";
 
 import "./estilos/encabezado.css";
 import { ModalBusqueda } from "./componentes/ModalBusqueda";
+import { Link } from "react-router-dom";
 export const Encabezado = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -20,14 +21,16 @@ export const Encabezado = () => {
         <img src={iconoTwitter} alt="Icono de facebook" className="t-links" />
       </section>
       <section className="flex-sm-grow-1">
-        <img src={logoApp} alt="Logo RollingCosmetics" className="t-logo" />
+        <Link to={"/"}>
+          <img src={logoApp} alt="Logo RollingCosmetics" className="t-logo" />
+        </Link>
       </section>
       <section className="d-none d-sm-block flex-sm-grow-2">
         <Button variant="secondary" onClick={handleShow}>
-          <IoSearchSharp  />
+          <IoSearchSharp />
         </Button>
       </section>
-      <ModalBusqueda show={show} handleClose = {handleClose}/>
+      <ModalBusqueda show={show} handleClose={handleClose} />
     </header>
   );
 };
