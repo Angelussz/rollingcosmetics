@@ -3,6 +3,7 @@
 import { RutaAplicacion } from "./rutas/RutaAplicacion";
 import { Encabezado } from "./iu/Encabezado";
 import Navbarr from "./components/pages/Navbar";
+import Footer from "./components/pages/Footer";
 
 
 const RollingCosmeticsApp = () => {
@@ -10,10 +11,10 @@ const RollingCosmeticsApp = () => {
     <>
       <Encabezado />
       <Navbarr/>
-
       <RutaAplicacion />
       {/* <CrearProducto />
       <Administracion /> */}
+      <Footer/>
       
     </>
   );
