@@ -29,7 +29,7 @@ export const Busqueda = () => {
     return () => {
       setProductos([]);
     };
-  }, []);
+  }, [busqueda]);
 
   return (
     <>
