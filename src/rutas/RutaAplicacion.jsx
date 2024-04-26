@@ -4,7 +4,6 @@ import { Destacados, Home, EditarProducto, Favoritos, Busqueda, Administracion, 
 import CrearProducto from "../components/sections/CrearProducto";
 import { RutasProtegida } from "./RutasProtegida";
 
-import PruebaDescripcion from "../components/pages/PruebaDescripcion";    /* BORRAR */
 
 export const RutaAplicacion = () => {
   const [usuario, setUsuario] = useState({
@@ -23,8 +22,6 @@ export const RutaAplicacion = () => {
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
-
-        <Route path="/descripcionPrueba" element={<PruebaDescripcion />} />  {/* BORRAR */}
 
         <Route
           element={
