@@ -9,7 +9,8 @@ import { clsx } from "clsx";
 import * as Yup from "yup";
 import axios from 'axios';
 
-const Editar = () => {
+
+export const EditarProducto = () => {
     const API = import.meta.env.VITE_API;
     const navigate = useNavigate();
     const { id } = useParams(); 
@@ -302,5 +303,3 @@ const Editar = () => {
         </div>
     );
 };
-
-export default Editar;
