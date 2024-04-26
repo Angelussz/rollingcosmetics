@@ -46,7 +46,7 @@ export const DescripcionProducto = () => {
                             }}/>
                             <h3 className="col-2 col-sm-2 mb-0 mt-2 fw-bold fs-4 text-center text-bg-light">{cantidadProductos}</h3>
                             <CgAdd className="col-2 col-sm-2 mt-2 fs-2 custom-icons" onClick={() => {
-                                setCantidadProductos((cantidadProductos) => cantidadProductos + 1)
+                                setCantidadProductos(((cantidadProductos) => (cantidadProductos < producto.stock) ? cantidadProductos + 1 : cantidadProductos = producto.stock))
                             }}/>
                         </div>
                         <button 
