@@ -9,6 +9,7 @@ export const Home = () => {
   const API = import.meta.env.VITE_API;
   const [productos, setProductos] = useState([]);
   const [filtroProducto, setFiltroProducto] = useState("");
+  const [productos3, setProductos3] = useState([]);
 
   const getProducto = async () => {
     try {
@@ -18,6 +19,16 @@ export const Home = () => {
       }
       const respuesta = await axios.get(URL);
       setProductos(respuesta.data);
+    } catch (error) {
+      console.error("ERROR ---> ", error);
+    }
+  }
+
+  const get3Productos = async () => {
+    try {
+      let URL = `${API}/productos?limite=3`;
+      const respuesta = await axios.get(URL);
+      setProductos3(respuesta.data);
     } catch (error) {
       console.error("ERROR ---> ", error);
     }
@@ -35,18 +46,41 @@ export const Home = () => {
     getProducto();
   }, [filtroProducto]);
 
+  useEffect(() => {
+    get3Productos();
+    return () => {
+      setProductos3([]);
+    }
+  }, []);
+
   console.log("Filtro: ", filtroProducto);
   return (
     <div className="fondoPrincipal">
       <div>
         <Carousel variant="dark">
-          <Carousel.Item>
+          {/* <Carousel.Item>
             <div text="Primer Slider" />
             <img className="d-block w-100" src="https://img.freepik.com/fotos-premium/lapiz-labial-cosmeticos_466973-1132.jpg?size=626&ext=jpg&ga=GA1.1.270176900.1713847796&semt=ais" alt="imagen" />
             <Carousel.Caption className="textoSlider">
               <h2>Promociones Bancarias</h2>
               <p>¡Todos los Martes con bancos seleccionados!</p>
             </Carousel.Caption>
+          </Carousel.Item> */}
+          <Carousel.Item>
+            <div>
+              <img className="d-block w-100" src="https://img.freepik.com/fotos-premium/lapiz-labial-cosmeticos_466973-1132.jpg?size=626&ext=jpg&ga=GA1.1.270176900.1713847796&semt=ais" alt="imagen" />
+              <Carousel.Caption>
+              <h2>Productos Destacados</h2>
+              <p>¡Mira nuestros productos más recientes al mejor precio!</p>
+                <div className="cardContainer">
+                  {productos3.map((elemento, indice) => {
+                    return (
+                      <TarjetaProducto producto={elemento} key={indice} i={3} />
+                    )
+                  })}
+                </div>
+              </Carousel.Caption>
+            </div>
           </Carousel.Item>
           <Carousel.Item>
             <div text="Segundo Slider" />
