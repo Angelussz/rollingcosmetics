@@ -1,7 +1,7 @@
 import ListaProductos from "../sections/ListaProductos";
 import ListaUsuarios from "../sections/ListaUsuarios";
 
-const Administracion = () => {
+export const Administracion = () => {
 
     return (
         <div>
@@ -11,5 +11,3 @@ const Administracion = () => {
         </div>
     );
 };
-
-export default Administracion;
