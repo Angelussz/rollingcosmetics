@@ -1,0 +1,44 @@
+.imagen {
+    height: 10rem;
+    padding: 5px;
+}
+
+.botonTarjeta {
+    border: 1px #8F2546 solid;
+    background-color: #FAE9F1;
+    color: grey;
+}
+
+.botonTarjeta:hover {
+    border: 1px #8F2546 solid;
+    background-color: rgb(221, 114, 203);
+    color: black;
+}
+
+.link {
+    text-decoration: "none";
+    color: #8F2546;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 9rem;
+    height: 20rem;
+    background-color: #FAE9F1;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+
+@media (min-width: 1025px) {
+    .custom-col {
+        width: 20%;
+        flex: 0 0 20%;
+        margin-right: 20px;
+    }
+}
