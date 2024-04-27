@@ -5,6 +5,7 @@ import TarjetaProducto from "../../iu/componentes/TarjetaProducto";
 import Carousel from 'react-bootstrap/Carousel';
 import "../pages/estilos/home.css";
 
+
 export const Home = () => {
   const API = import.meta.env.VITE_API;
   const [productos, setProductos] = useState([]);

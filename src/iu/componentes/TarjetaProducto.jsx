@@ -17,6 +17,7 @@ const TarjetaProducto = ({ producto, getProducto }) => {
                     </div>
                 </div>
             </Col>
+
         </>
     )
 };
