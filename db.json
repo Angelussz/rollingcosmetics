@@ -7,8 +7,8 @@
             "marca": "Pantene",
             "precio": "4.399,99",
             "stock": "20",
-            "urlImagen": "https://media.istockphoto.com/id/164505409/es/foto/l%C3%A1piz-labial-rojo.jpg?s=612x612&w=0&k=20&c=eNdOKL6P787wz0DYjOYN6rqjW6CAmDr1OJAS-BvCJu0=",
-            "descripcion": "Pinta labio rojo"
+            "imagen": "https://media.istockphoto.com/id/164505409/es/foto/l%C3%A1piz-labial-rojo.jpg?s=612x612&w=0&k=20&c=eNdOKL6P787wz0DYjOYN6rqjW6CAmDr1OJAS-BvCJu0=",
+            "descripcion": "Pinta labio de color rojo escarlata."
           },
           {
             "id": "268d",
@@ -17,28 +17,28 @@
             "marca": "L´Oréal",
             "precio": "2.999,99",
             "stock": "20",
-            "urlImagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
-            "descripcion": "Labial líquido rosa"
+            "imagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "Labial líquido de color rosa. Hará que sus labios resalten."
           },
           {
             "id": "4f39",
             "categoria": "facial",
-            "nombre": "L\"f\"opo",
-            "marca": "ernieri",
+            "nombre": "Mascarilla facial",
+            "marca": "Natura",
             "precio": "2,00",
             "stock": "23",
-            "urlImagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
-            "descripcion": "dinendenrfi"
+            "imagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "Mascarilla de muy alta densidad y concentración. Hecha con las más innovadoras técnicas de cosméticos 4.0"
           },
           {
             "id": "3115",
             "categoria": "facial",
-            "nombre": "kjn´jhd´we",
-            "marca": "ednier",
+            "nombre": "pinta cara",
+            "marca": "Natura",
             "precio": "2.332,22",
             "stock": "1",
-            "urlImagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
-            "descripcion": "sxhxhhxhxhhxhx"
+            "imagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "El mejor pinta cara del universo. Listo para usar en su rostro."
           }
     ],
     "usuarios": [

@@ -9,7 +9,6 @@ import { clsx } from "clsx";
 import * as Yup from "yup";
 import axios from 'axios';
 
-
 export const EditarProducto = () => {
     const API = import.meta.env.VITE_API;
     const navigate = useNavigate();
