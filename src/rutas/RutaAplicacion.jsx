@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Destacados, Home, EditarProducto, Favoritos, Busqueda, Administracion, Contacto, DescripcionProducto } from "../components/pages";
+import Error404 from "../components/pages/Error404";
 import CrearProducto from "../components/sections/CrearProducto";
 import { RutasProtegida } from "./RutasProtegida";
 
@@ -21,6 +22,7 @@ export const RutaAplicacion = () => {
         <Route path="/destacados" element={<Destacados />} />
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
+        <Route path="/*" element={<Error404/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
 
         <Route
