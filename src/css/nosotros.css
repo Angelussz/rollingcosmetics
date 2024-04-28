@@ -1,0 +1,110 @@
+.custom-article {
+    background-color: #f1f1f1;
+    border: 10px double #000000;
+}
+
+.custom-container__cards{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.custom-card{
+    background-color: #f0b1cd;
+    border: none;
+    width: 300px;
+    margin: 10px;
+    transition: all 300ms;
+}
+
+.custom-card .custom-cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-card .custom-cover img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.custom-card:hover .custom-cover img{
+    top: 0px;
+    filter: none;
+}
+
+.custom-card .custom-img__back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.custom-card:nth-of-type(1) .custom-img__back{
+    background-image: url(../../../public/imagenes/bg1.jpg);
+}
+
+.custom-card:nth-of-type(2) .custom-img__back{
+    background-image: url(../../../public/imagenes/bg3.jpg);
+}
+
+.custom-card:nth-of-type(3) .custom-img__back{
+    background-image: url(../../../public/imagenes/bg2.jpg);
+}
+
+.custom-card:hover .custom-img__back{
+    bottom: -40px;
+}
+
+.custom-card .custom-description{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+
+.custom-card:hover .custom-description{
+    padding: 40px;
+}
+
+.custom-card .custom-description h2{
+    margin-top: 10px;
+}
+
+.custom-card .custom-description p{
+    margin-top: 10px;
+}
+
+.custom-cards-icons {
+    width: 30px;
+    height: 30px;
+}
+
+.custom-github {
+    color: #000000;
+}
+
+.custom-linkedin {
+    color: #0a66c2;
+}
+
+@media screen and (min-width: 768px) {
+    .custom-card:hover{
+        width: 350px;
+    }
+}
