@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Destacados, Home, EditarProducto, Favoritos, Busqueda, Administracion, Contacto, DescripcionProducto } from "../components/pages";
+import Nosotros from "../components/pages/Nosotros";
 import CrearProducto from "../components/sections/CrearProducto";
 import { RutasProtegida } from "./RutasProtegida";
 
@@ -21,6 +22,7 @@ export const RutaAplicacion = () => {
         <Route path="/destacados" element={<Destacados />} />
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
+        <Route path="/nosotros" element={<Nosotros/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
 
         <Route
