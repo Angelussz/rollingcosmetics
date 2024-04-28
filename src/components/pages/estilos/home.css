@@ -32,10 +32,10 @@
     }
 }
 
-.imagen{
+/*.imagen{
     height: 10rem;
     padding: 5px;
-}
+}*/
 
 .imagenPublicidad{
     width: 100%;
@@ -82,7 +82,7 @@
     }
 }
 
-@media (min-width: 500px) and (max-width: 1099px){
+@media (min-width: 550px) and (max-width: 1099px){
     .textoSlider{
         font-size: 35px;
         margin-bottom: 5rem;
@@ -104,4 +104,6 @@
 .cardContainer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
