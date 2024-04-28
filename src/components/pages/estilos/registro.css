@@ -1,0 +1,9 @@
+.fondoSecundarioRegistro{
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    margin-bottom: 5%;
+    background-color: #FAE9F1;
+}
+
+.sombra{
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}

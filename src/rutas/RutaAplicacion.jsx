@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Destacados, Home, EditarProducto, Favoritos, Busqueda, Administracion, Contacto, DescripcionProducto } from "../components/pages";
 import CrearProducto from "../components/sections/CrearProducto";
 import { RutasProtegida } from "./RutasProtegida";
+import Registro from "../components/pages/Registro";
 
 
 export const RutaAplicacion = () => {
@@ -22,6 +23,7 @@ export const RutaAplicacion = () => {
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
+        <Route path="/registro" element={<Registro />}/>
 
         <Route
           element={
