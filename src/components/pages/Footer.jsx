@@ -6,7 +6,7 @@ const Footer = () => {
           {" "}
           <img src="/public/imagenes/rollingCosmeticsLogo2.png" alt="" />
         </p>
-        <p className="col-sm-12 col-md-6 col-lg-4 text-center">
+        <div className="col-sm-12 col-md-6 col-lg-4 text-center">
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" href="#">
@@ -29,7 +29,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-        </p>
+        </div>
         <p className="col-sm-12 col-md-6 col-lg-4 text-center">
           <img src="/public/imagenes/facebookicon.png" alt="" />
           <img src="/public/imagenes/instagramicon.png" alt="" />
