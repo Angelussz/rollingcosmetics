@@ -31,7 +31,14 @@ const Registro = () => {
             const respuesta = await axios.post(`${API}/usuarios`, cuerpoEnviar);
             if (respuesta.status === 201) {
                 setShowSuccessModal(true);
-                //Formatear formulario
+                setNombre('');
+                setApellido('');
+                setEmail('');
+                setClave('');
+                setNombreError('');
+                setApellidoError('');
+                setEmailError('');
+                setClaveError('');
             } else {
                 setShowErrorModal(true);
             }
@@ -79,7 +86,7 @@ const Registro = () => {
             setApellidoError('');
         }
     };
-    
+
     const handleEmailChange = (e) => {
         const newValue = e.target.value;
         setEmail(newValue);
@@ -174,7 +181,7 @@ const Registro = () => {
                             <Form.Label>Contraseña</Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="Clave"
+                                placeholder="Contraseña"
                                 value={clave}
                                 onChange={handleClaveChange}
                                 minLength={6}
