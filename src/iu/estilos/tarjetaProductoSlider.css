@@ -1,4 +1,4 @@
-.imagen {
+.imagenSlider {
     height: 10rem;
     padding: 5px;
 }
@@ -20,7 +20,7 @@
     color: #8F2546;
 }
 
-.tarjeta {
+.tarjetaSlider {
     display: flex;
     flex-direction: column;
     border: 1px solid #ddd;
@@ -36,22 +36,18 @@
     word-wrap: break-word ;
 }
 
-@media (min-width: 993px) {
-    .custom-col {
+@media (min-width: 1020px) {
+    .custom-col-Slider {
         width: 20%;
         flex: 0 0 20%;
         margin-right: 20px;
         align-items: center;
         text-align: center;
     }
-
-    .justify-content-center{
-        --bs-gutter-x: 0;
-    }
 }
 
-@media (min-width: 551px) and (max-width: 992px) {
-    .custom-col {
+@media (min-width: 651px) and (max-width: 900px) {
+    .custom-col-Slider {
         width: 33%;
         flex: 0 0 33%;
         /*margin-right: 5px;
@@ -60,41 +56,55 @@
         text-align: center;
     }
 
-    .imagen {
-        height: 70%;
+    .imagenSlider {
+        height: 40%;
         padding: 2px;
+    }
+
+    .tarjetaSlider{
+        height: 10rem;
+        width: 6rem;
+        padding: 5px;
+        margin-bottom: 0px;
+        margin-left: 15%;
+        margin-top: 15px;
+        align-items: center;
+    }
+
+    .tarjetaChicaSlider{
+        display: none;
     }
 }
 
-@media (max-width: 550px){
-    .tarjetaChica{
+@media (max-width: 650px){
+    .tarjetaChicaSlider{
         display: none;
     }
     
-    .tarjeta{
-        /* height: 10rem; */
-        /* width: 6rem; */
-        /* padding: 5px; */
+    .tarjetaSlider{
+        height: 10rem;
+        width: 6rem;
+        padding: 5px;
         margin-bottom: 0px;
         margin-left: 15%;
         margin-top: 15px;
         align-items: center;
     }
     
-    .imagen {
-        height: 30%;
+    .imagenSlider {
+        height: 40%;
         padding: 2px;
     }
 }
 
 @media (max-width: 350px){
-    .tarjetaChica{
+    .tarjetaChicaSlider{
         display: none;
     }
     
-    .tarjeta{
-        /* height: 10rem; */
-        /* width: 6rem; */
+    .tarjetaSlider{
+        height: 10rem;
+        width: 6rem;
         padding: 5px;
         margin-top: 30px;
         margin-bottom: -20px;
@@ -102,8 +112,8 @@
         align-items: center;
     }
     
-    .imagen {
-        height: 30%;
+    .imagenSlider {
+        height: 4rem;
         padding: 2px;
     }
 }
