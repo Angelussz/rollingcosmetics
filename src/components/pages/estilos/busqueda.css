@@ -1,0 +1,19 @@
+.imagenBusqueda{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.fondoSecundarioBusqueda{
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+
+.textoBusqueda{
+    color: #FAE9F1;
+    text-decoration: underline;
+}
+
+.centrarTarjetas{
+    display: flex;
+    justify-content: center;
+}

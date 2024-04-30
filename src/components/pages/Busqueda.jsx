@@ -4,9 +4,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import ImagenProductos from "../../../public/imagenes/productos_belleza.webp";
+import ImagenProductos from "../../../public/imagenes/rollingCosmeticsLogo.png";
 import TarjetaProducto from "../../iu/componentes/TarjetaProducto";
 import Spinner from "react-bootstrap/Spinner";
+import "./estilos/busqueda.css"
+
 export const Busqueda = () => {
   const API = import.meta.env.VITE_API_BACK;
   const { busqueda } = useParams();
@@ -33,19 +35,25 @@ export const Busqueda = () => {
 
   return (
     <>
-      <img
-        src={ImagenProductos}
-        alt="Imagen de productos referencial"
-        className="img-fluid"
-      />
+      {/* <div className="imagenBusqueda">
+        <img src="https://eldinero.com.do/wp-content/uploads/Bellezas.jpg" alt="Imagen de productos referencial" className="" />
+      </div> */}
       {productos.length > 0 ? (
         <Container className="my-3">
-          <h1>Busqueda</h1>
+          {/* <h1>Busqueda</h1>
           <p>
             Productos relacionados a{" "}
             <span style={{ fontWeight: "bold" }}> {busqueda}</span>:
-          </p>
-          <Row>
+          </p> */}
+          <div className="fondoSecundario fondoSecundarioBusqueda py-2 my-3" style={{ borderRadius: "10px" }}>
+            <h1 className="text-center"> RollingCosmetic </h1>
+            <div className="ms-3">
+              <h2>Búsqueda Relacionada</h2>
+              {/* <p>Productos relacionados a{" "} <span style={{ fontWeight: "bold" }}> {busqueda}</span>:</p> */}
+              <p>Productos relacionados a{" "} <span className="textoBusqueda"> {busqueda}</span>:</p>
+            </div>
+          </div>
+          <Row className="centrarTarjetas">
             {productos.map((producto) => {
               return <TarjetaProducto producto={producto} key={producto._id} />;
             })}
@@ -53,8 +61,8 @@ export const Busqueda = () => {
         </Container>
       ) : (
         <div className="mt-4 text-center">
-          <h2>Cargando productos:</h2> 
-          <Spinner  animation="border" />
+          <h2>Cargando productos:</h2>
+          <Spinner animation="border" />
         </div>
       )}
       {/* <code>{JSON.stringify(productos)}</code> */}
