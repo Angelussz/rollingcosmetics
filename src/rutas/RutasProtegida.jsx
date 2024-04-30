@@ -1,12 +1,13 @@
 import React from 'react'
 import {Navigate, Outlet } from "react-router-dom"
+import Error404 from '../components/pages/Error404'
 export const RutasProtegida = ({
   esPermitida,
   redireccionar = "/",
   children
 }) => {
   if(!esPermitida){
-    return <div><h1>Pagina error</h1></div>
+    return <Error404/>
     // return <Navigate to={redireccionar}/>
     
   }

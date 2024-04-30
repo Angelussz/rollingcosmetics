@@ -22,8 +22,7 @@ export const RutaAplicacion = () => {
         <Route path="/*" element={<Error404/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
         <Route path="/registro" element={ usuarioActual=== undefined?<Registro />:<Navigate to={"/"}/>} />
-        <Route path="/destacados" element={<Destacados />}/>
-        <Route path="/favoritos" element={<Favoritos />}/>
+        
         <Route
           element={
             <RutasProtegida
