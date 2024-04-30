@@ -33,12 +33,73 @@
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    word-wrap: break-word ;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1020px) {
     .custom-col {
         width: 20%;
         flex: 0 0 20%;
         margin-right: 20px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 900px) {
+    .custom-col {
+        width: 33%;
+        flex: 0 0 33%;
+        /*margin-right: 5px;
+        margin-left: 20px;*/
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagen {
+        height: 10%;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 550px){
+    .tarjetaChica{
+        display: none;
+    }
+    
+    .tarjeta{
+        height: 10rem;
+        width: 6rem;
+        padding: 5px;
+        margin-bottom: 0px;
+        margin-left: 15%;
+        margin-top: 15px;
+        align-items: center;
+    }
+    
+    .imagen {
+        height: 40%;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 350px){
+    .tarjetaChica{
+        display: none;
+    }
+    
+    .tarjeta{
+        height: 10rem;
+        width: 6rem;
+        padding: 5px;
+        margin-top: 30px;
+        margin-bottom: -20px;
+        margin-left: 10px;
+        align-items: center;
+    }
+    
+    .imagen {
+        height: 4rem;
+        padding: 2px;
     }
 }

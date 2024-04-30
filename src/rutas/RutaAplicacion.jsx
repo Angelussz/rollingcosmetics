@@ -1,8 +1,11 @@
 import { useContext, useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { Destacados, Home, EditarProducto, Favoritos, Busqueda, Administracion, Contacto, DescripcionProducto } from "../components/pages";
+import Nosotros from "../components/pages/Nosotros";
+import Error404 from "../components/pages/Error404";
 import CrearProducto from "../components/sections/CrearProducto";
 import { RutasProtegida } from "./RutasProtegida";
+import Registro from "../components/pages/Registro";
 import { AuthContext } from "../context";
 
 export const RutaAplicacion = () => {
@@ -15,14 +18,11 @@ export const RutaAplicacion = () => {
         <Route path="/destacados" element={<Destacados />} />
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
+        <Route path="/nosotros" element={<Nosotros/>} />
+        <Route path="/*" element={<Error404/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
         <Route path="/registro" element={ usuarioActual=== undefined?<div>Registro</div>:<Navigate to={"/"}/>} />
-        {/* {
-          (usuarioActual === undefined) && (
-            <Route path="/registro" element={<h1>Registro</h1>} />
-          )
-        } */}
-
+        <Route path="/destacados" element={<Destacados />}/>
         <Route
           element={
             <RutasProtegida

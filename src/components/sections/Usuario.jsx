@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import Button from 'react-bootstrap/Button';
+import BorrarUsuario from "./BorrarUsuario.jsx";
 
-const Usuario = ({ usuario }) => {
+const Usuario = ({ usuario, getUsuario }) => {
     return (
         <tr>
             <td>{usuario._id}</td>
@@ -11,7 +11,7 @@ const Usuario = ({ usuario }) => {
             <td>{usuario.rol}</td>
             <td className='p-0'>
                 <div>
-                    <Button type="button" variant="danger">Borrar</Button>
+                    <BorrarUsuario id={usuario._id} getUsuario={getUsuario} />
                 </div>
             </td>
         </tr>
