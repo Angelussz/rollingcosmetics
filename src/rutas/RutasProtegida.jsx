@@ -6,7 +6,9 @@ export const RutasProtegida = ({
   children
 }) => {
   if(!esPermitida){
-    return <Navigate to={redireccionar}/>
+    return <div><h1>Pagina error</h1></div>
+    // return <Navigate to={redireccionar}/>
+    
   }
   return children?children: <Outlet />
 }

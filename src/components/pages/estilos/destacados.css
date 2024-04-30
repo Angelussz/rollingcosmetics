@@ -1,0 +1,14 @@
+.imagenDestacados{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sombra{
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+
+.contenedorRegistro{
+    width: 50%;
+    margin: 15px 20px;
+}
