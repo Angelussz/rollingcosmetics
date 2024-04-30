@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Button } from "react-bootstrap";
 import Swal from 'sweetalert2';
 import axios from "axios";

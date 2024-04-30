@@ -25,9 +25,6 @@ const Navbarr = () => {
   return (
     <Navbar expand="lg" className="bg-danger" data-bs-theme="dark" >
       <Container>
-        {/* <Navbar.Brand href="#home" className="d-none d-lg-block">
-          Inicio
-        </Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Col lg={{ order: "last" }}>
           <div className="d-flex justify-content-end align-items-center">

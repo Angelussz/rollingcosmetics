@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/descripcion_producto.css";
 import { useState, useEffect } from "react";

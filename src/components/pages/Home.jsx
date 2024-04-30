@@ -35,14 +35,6 @@ export const Home = () => {
     }
   }
 
-  /*useEffect(() => {
-    getProducto()
-
-    return () => {
-      setProductos([]);
-    }
-  }, []);*/
-
   useEffect(() => {
     getProducto();
   }, [filtroProducto]);
@@ -54,19 +46,10 @@ export const Home = () => {
     }
   }, []);
 
-  console.log("Filtro: ", filtroProducto);
   return (
     <div className="fondoPrincipal">
       <div>
         <Carousel variant="dark">
-          {/* <Carousel.Item>
-            <div text="Primer Slider" />
-            <img className="d-block w-100" src="https://img.freepik.com/fotos-premium/lapiz-labial-cosmeticos_466973-1132.jpg?size=626&ext=jpg&ga=GA1.1.270176900.1713847796&semt=ais" alt="imagen" />
-            <Carousel.Caption className="textoSlider">
-              <h2>Promociones Bancarias</h2>
-              <p>¡Todos los Martes con bancos seleccionados!</p>
-            </Carousel.Caption>
-          </Carousel.Item> */}
           <Carousel.Item>
             <div>
               <img className="d-block w-100" src="https://img.freepik.com/fotos-premium/lapiz-labial-cosmeticos_466973-1132.jpg?size=626&ext=jpg&ga=GA1.1.270176900.1713847796&semt=ais" alt="imagen" />

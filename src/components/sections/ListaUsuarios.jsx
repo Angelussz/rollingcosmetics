@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Table } from 'react-bootstrap';
 import Usuario from "./Usuario";
 import axios from "axios"
@@ -10,7 +9,6 @@ const ListaUsuarios = () => {
     const [usuarios,setUsuarios] = useState([]);
 
     const getUsuario = async () => {
-        // console.log(axios.defaults.headers.common)
         try {
             const response = await axios(`${API}/usuarios`);
             const {data:resJson} = await response;

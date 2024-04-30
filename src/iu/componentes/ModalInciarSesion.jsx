@@ -30,7 +30,6 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
     validateOnBlur: true,
     validateOnChange: true,
     onSubmit: async (valores) => {
-      // console.log("VALUES-->", valores);
       setCargando(true);
       Swal.fire({
         title: "Inciando sesión...",
@@ -43,7 +42,6 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
       });
       try {
         const respuesta = await axios.post(`${API}/usuarios/login`, valores);
-        // console.log("respuesta login-->", response.data);
         
         if (respuesta.status === 200) {
           GuardarUsuario(respuesta.data);
@@ -150,16 +148,6 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        {/* <Button variant="secondary" onClick={handleClose} disabled={cargando}>
-          Cerrar
-        </Button>
-        <Button
-          variant="primary"
-          onClick={handleIniciarSesion}
-          disabled={cargando}
-        >
-          Ingresar
-        </Button> */}
       </Modal.Footer>
     </Modal>
   );

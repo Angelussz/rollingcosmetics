@@ -50,8 +50,6 @@
     .custom-col-Slider {
         width: 33%;
         flex: 0 0 33%;
-        /*margin-right: 5px;
-        margin-left: 20px;*/
         align-items: center;
         text-align: center;
     }

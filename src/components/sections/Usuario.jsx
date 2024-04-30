@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import BorrarUsuario from "./BorrarUsuario.jsx";
 
 const Usuario = ({ usuario, getUsuario }) => {
