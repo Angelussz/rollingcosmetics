@@ -10,7 +10,7 @@ import "../../css/footer.css";
 const Footer = () => {
     return (
         <>
-            <div className="container-fluid">
+            <div className="">
                 <div className="row pb-4 pt-lg-5 custom-footer mt-5">
                     <div className="d-flex col-lg-4 justify-content-center">
                         <img src={logo} alt="Rolling Cosmetics" className="custom-logo my-auto" />
@@ -52,7 +52,7 @@ const Footer = () => {
                         <img src={dataFiscal} alt="Data Fiscal" className="d-sm-none mb-5 custom-datafiscal" />
                     </div>
                 </div>
-                <div className="row">
+                <div className="foot">
                     <p className="text-center py-3 custom-copyright">
                         &copy; Copyright 2024 RollingCosmetic - All Rights Reserved
                     </p>

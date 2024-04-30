@@ -34,3 +34,14 @@ p {
     background-color: #222222;
     color: #ffffff;
 }
+
+.foot{
+    width: 100%;
+    position: relative;
+    flex: content;
+    margin-bottom: -50px;
+}
+
+.row{
+    --bs-gutter-x: 0;
+}
