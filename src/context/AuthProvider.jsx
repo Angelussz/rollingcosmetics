@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import axios from 'axios';
-const usuario = {
-    id: "122afsd",
-    nombre: "Angelo",
-    apellido: "Perez",
-    email: "angelo@gmail.com",
-    rol: "Usuario",
-  }
 export const AuthProvider = ({ children }) => {
   const [usuarioActual, setUsuarioActual] = useState(undefined);
   const GuardarUsuario = (auth) => {
