@@ -13,7 +13,7 @@ const TarjetaProducto = ({ producto, getProducto }) => {
                         <p className="tarjetaChica">${producto.precio}</p>
                     </div>
                     <div className="mt-3 botonTarjeta w-75 mx-auto">
-                        <Link to={`/detalles/${producto._id}`} className="link" style={{textDecoration: "none"}}>Ver más</Link>
+                        <Link to={`/descripcion/${producto._id}`} className="link" style={{textDecoration: "none"}}>Ver más</Link>
                     </div>
                 </div>
             </Col>

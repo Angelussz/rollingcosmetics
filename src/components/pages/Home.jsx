@@ -141,7 +141,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex container fondoSecundario align-items-center">
+      <div className="d-flex container fondoSecundario align-items-center my-2">
         <img src="https://img.freepik.com/vector-premium/banner-promocion-venta-cuidado-piel-mujer-bata-bano-toalla-gua-sha-herramientas-masaje-parches-ojos_372860-482.jpg?size=626&ext=jpg&ga=GA1.1.270176900.1713847796&semt=ais" className="imagenPublicidad marcoPublicidad" alt="Publicidad" />
       </div>
     </div>
