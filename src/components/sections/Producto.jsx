@@ -19,7 +19,6 @@ const Producto = ({ producto, getProducto }) => {
             <td className='p-0'>
                 <div>
                     <Button type="button" variant="warning" onClick={()=>{ navigate(`/editar/${producto._id}`) }}>Editar</Button>
-                    <Button type="button" variant="danger">Borrar</Button>
                     <BorrarProducto id={producto._id} getProducto={getProducto} />
                 </div>
             </td>
