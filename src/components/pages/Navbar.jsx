@@ -9,8 +9,9 @@ import Col from "react-bootstrap/Col";
 import { UsuarioNavbar } from "../../iu/componentes/UsuarioNavbar";
 import { IoMdHelpCircle } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom'
 const Navbarr = () => {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const { usuarioActual, RemoverUsuario, setUsuarioActual } =
     useContext(AuthContext);
@@ -19,6 +20,7 @@ const Navbarr = () => {
   const cerrarSesion = () => {
     RemoverUsuario();
     setUsuarioActual(undefined);
+    navigate("/")
   };
   return (
     <Navbar expand="lg" className="bg-danger" data-bs-theme="dark" >

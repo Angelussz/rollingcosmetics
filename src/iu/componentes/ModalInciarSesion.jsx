@@ -18,7 +18,7 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
       .min(7)
       .max(128)
       .required("el email es requerido"),
-    clave: Yup.string().min(6).max(20).required(),
+    clave: Yup.string().min(6).max(20).required("la contraseña es requerida"),
   });
   const valoresIniciales = {
     email: "",
@@ -132,7 +132,7 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
             >
               {cargando ? (
                 <div className="spinner-grow" role="status">
-                  <span className="visually-hidden">Loading...</span>
+                  <span className="visually-hidden">Cargando...</span>
                 </div>
               ) : (
                 <>Ingresar</>
