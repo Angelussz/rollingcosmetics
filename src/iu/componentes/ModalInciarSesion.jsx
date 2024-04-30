@@ -150,7 +150,7 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
       </Modal.Body>
       <Modal.Footer>
         <p>No tienes cuenta aun?</p>
-        <Link to={"/registro"}>Registrase</Link>
+        <Link to={"/registro"} onClick={()=>{handleClose()}} >Registrase</Link>
       </Modal.Footer>
     </Modal>
   );
