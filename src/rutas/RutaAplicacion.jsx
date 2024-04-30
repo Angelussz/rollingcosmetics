@@ -25,8 +25,8 @@ export const RutaAplicacion = () => {
         <Route path="/nosotros" element={<Nosotros/>} />
         <Route path="/*" element={<Error404/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
+        <Route path="/destacados" element={<Destacados />}/>
         <Route path="/registro" element={<Registro />}/>
-
         <Route
           element={
             <RutasProtegida
