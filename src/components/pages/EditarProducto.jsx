@@ -112,7 +112,7 @@ export const EditarProducto = () => {
                             descripcion: values.descripcion
                         };
 
-                        const response = await axios.put(`${API}/productos/editar`, updateProduct);
+                        const response = await axios.put(`${API}/productos/actualizar`, updateProduct);
 
                         if (response.status === 200) {  
                             Swal.fire({
