@@ -22,6 +22,7 @@ export const RutaAplicacion = () => {
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
+        <Route path="/destacados" element={<Destacados />}/>
 
         <Route
           element={
