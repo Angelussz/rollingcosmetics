@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 export const ModalInciarSesion = ({ show, handleClose }) => {
   const API = import.meta.env.VITE_API_BACK;
   const [cargando, setCargando] = useState(false);
@@ -148,6 +149,8 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
+        <p>No tienes cuenta aun?</p>
+        <Link to={"/registro"}>Registrase</Link>
       </Modal.Footer>
     </Modal>
   );
