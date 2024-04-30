@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Table } from 'react-bootstrap';
 import Usuario from "./Usuario";
+import axios from "axios"
 import { useState, useEffect } from 'react';
 
 
@@ -9,10 +10,11 @@ const ListaUsuarios = () => {
     const [usuarios,setUsuarios] = useState([]);
 
     const getUsuario = async () => {
+        // console.log(axios.defaults.headers.common)
         try {
-            const response = await fetch(`${API}/usuarios`);
-            const resJson = await response.json();
-            console.log(resJson);
+            const response = await axios(`${API}/usuarios`);
+            const {data:resJson} = await response;
+            
 
             setUsuarios(resJson);
         } catch (error) {
