@@ -1,0 +1,67 @@
+{
+    "productos": [
+        {
+            "id": "84e5",
+            "categoria": "facial",
+            "nombre": "Pinta labio",
+            "marca": "Pantene",
+            "precio": "4.399,99",
+            "stock": "20",
+            "imagen": "https://cdn.pixabay.com/photo/2023/09/26/17/32/woman-8277925_1280.jpg",
+            "descripcion": "Pinta labio de color rojo escarlata."
+          },
+          {
+            "id": "268d",
+            "categoria": "maquillaje",
+            "nombre": "Labial líquido",
+            "marca": "L´Oréal",
+            "precio": "2.999,99",
+            "stock": "20",
+            "imagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "Labial líquido de color rosa. Hará que sus labios resalten."
+          },
+          {
+            "id": "4f39",
+            "categoria": "facial",
+            "nombre": "Mascarilla facial",
+            "marca": "Natura",
+            "precio": "2,00",
+            "stock": "23",
+            "imagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "Mascarilla de muy alta densidad y concentración. Hecha con las más innovadoras técnicas de cosméticos 4.0"
+          },
+          {
+            "id": "3115",
+            "categoria": "facial",
+            "nombre": "pinta cara",
+            "marca": "Natura",
+            "precio": "2.332,22",
+            "stock": "1",
+            "imagen": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/articles/le-matte-resistance/30149472_1.jpg?w=360&rev=64905b39de514d11b2f77add8d7aeaed&hash=4B7589EF542B7C6596CA0FCFDE01ECDEE0D2476C",
+            "descripcion": "El mejor pinta cara del universo. Listo para usar en su rostro."
+          }
+    ],
+    "usuarios": [
+          {
+            "id": "87h7",
+            "nombre": "Angelo",
+            "apellido": "Perez",
+            "email": "angelo@gmail.com",
+            "rol": "Admin"
+          },
+          {
+            "id": "8aq5",
+            "nombre": "Juan",
+            "apellido": "Illa",
+            "email": "juan@gmail.com",
+            "rol": "User"
+          },
+          {
+            "id": "81e5",
+            "nombre": "Facundo",
+            "apellido": "Palacios",
+            "email": "facundo@gmail.com",
+            "rol": "User"
+          }
+    ]
+}
