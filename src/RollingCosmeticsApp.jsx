@@ -6,15 +6,19 @@ import { useContext } from "react";
 import { AuthContext } from "./context";
 
 const RollingCosmeticsApp = () => {
-  const {usuarioActual} = useContext(AuthContext);
-  console.log(usuarioActual)
+  const { usuarioActual } = useContext(AuthContext);
   return (
     <>
-      <Encabezado />
-      <Navbarr/>
-      <RutaAplicacion />
-      <Footer/>
-      
+      <header style={{ position: "sticky", top: "0", zIndex: "10" }}>
+        <Encabezado />
+        <Navbarr />
+      </header>
+      <main>
+        <RutaAplicacion />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

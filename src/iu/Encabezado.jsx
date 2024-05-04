@@ -14,7 +14,7 @@ export const Encabezado = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <header className="d-flex justify-content-between align-items-center gradiente px-3 h-5">
+    <section className="d-flex justify-content-between align-items-center gradiente px-3 h-5">
       <section className="flex-sm-grow-1">
         <img src={iconoFacebook} alt="Icono de facebook" className="t-links" />
         <img src={iconoInstagram} alt="Icono de facebook" className="t-links" />
@@ -31,6 +31,6 @@ export const Encabezado = () => {
         </Button>
       </section>
       <ModalBusqueda show={show} handleClose={handleClose} />
-    </header>
+    </section>
   );
 };
