@@ -25,7 +25,7 @@ export const Encabezado = () => {
           <img src={logoApp} alt="Logo RollingCosmetics" className="t-logo" />
         </Link>
       </section>
-      <section className="d-none d-sm-block flex-sm-grow-2">
+      <section className="flex-sm-grow-2">
         <Button variant="secondary" onClick={handleShow}>
           <IoSearchSharp />
         </Button>
