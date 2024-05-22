@@ -7,7 +7,6 @@ import { AuthContext } from "./context";
 
 const RollingCosmeticsApp = () => {
   const {usuarioActual} = useContext(AuthContext);
-  console.log(usuarioActual)
   return (
     <>
       <Encabezado />
