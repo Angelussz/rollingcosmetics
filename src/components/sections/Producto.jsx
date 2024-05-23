@@ -19,8 +19,8 @@ const Producto = ({ producto, getProducto }) => {
             <td className="custom-td-width">{producto.imagen}</td>
             <td className="custom-td-width">{producto.descripcion}</td>
             <td className='p-0 align-content-center'>
-                <div className="d-flex justify-content-around align-content-center my-auto custom-td-width">
-                    <Button type="button" variant="warning" onClick={()=>{ navigate(`/editar/${producto._id}`) }}>Editar</Button>
+                <div className="d-flex justify-content-around align-content-center">
+                    <Button type="button" variant="warning" className="mx-2" onClick={()=>{ navigate(`/editar/${producto._id}`) }}>Editar</Button>
                     <BorrarProducto id={producto._id} getProducto={getProducto} />
                 </div>
             </td>

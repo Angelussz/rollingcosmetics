@@ -252,7 +252,6 @@ const CrearProducto = () => {
                         <Form.Label>Fecha del stock:</Form.Label>
                         <Form.Control 
                             type="date" 
-                            placeholder="Ingrese la fecha del stock del producto"
                             name="fecha"
                             {...formik.getFieldProps("fecha")}
                             className={clsx("form-control",
