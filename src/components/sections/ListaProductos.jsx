@@ -31,13 +31,13 @@ const ListaProductos = () => {
 
     return (
         <>
-            <div className="p-4">
+            <div className="pb-4 px-4">
                 <div className="container-fluid"> 
                     <Row>
                         <Col xs={9}>
                             <h3 className="mb-3">Lista de Productos</h3>
                         </Col>   
-                        <Col xs={3}>
+                        <Col xs={3} className="d-flex justify-content-end mb-3">
                             <Button 
                                 variant="primary"
                                 onClick={()=>{
@@ -52,12 +52,13 @@ const ListaProductos = () => {
                 <Table responsive bordered hover >
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>ID</th> 
                             <th>Categoría</th>
                             <th>Nombre</th>
                             <th>Marca</th>
                             <th>Precio</th>
                             <th>Stock</th>
+                            <th>Fecha</th>
                             <th>Imagen</th>
                             <th>Descripción</th>
                             <th>Acciones</th>

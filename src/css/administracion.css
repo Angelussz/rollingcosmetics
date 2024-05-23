@@ -1,0 +1,6 @@
+.custom-td-width {
+    width: 200px; 
+    min-width: 200px;
+    word-break: break-all; 
+    overflow: hidden; 
+}
