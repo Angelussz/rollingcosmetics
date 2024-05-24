@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Table, Row, Col, Button } from 'react-bootstrap';
 import Producto from "./Producto";
 import { useState, useEffect } from 'react';

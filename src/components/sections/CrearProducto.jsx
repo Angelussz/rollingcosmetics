@@ -31,7 +31,6 @@ const CrearProducto = () => {
                 .trim()
                 .matches(/^\d{1,3}(\.\d{3})*,\d{2}$/, "El formato del precio debe ser 'EJ: 4.000,00'")
                 .test("es-numero", "El valor debe ser un número válido", value => {
-                // Verifica que sea un número válido
                     const numero = Number(value.replace(/[.,]/g, ""));
                     return !isNaN(numero);
                 })

@@ -8,7 +8,6 @@ export const RutasProtegida = ({
 }) => {
   if(!esPermitida){
     return <Error404/>
-    // return <Navigate to={redireccionar}/>
     
   }
   return children?children: <Outlet />
