@@ -69,13 +69,10 @@ export const EditarProducto = () => {
             precio: Yup.string()
                 .trim()
                 .matches(/^\d{1,3}(\.\d{3})*,\d{2}$/, "El formato del precio debe ser 'EJ: 4.000,00'")
-                .test("es-numero", "El valor debe ser un número válido", value => {
-                // Verifica que sea un número válido
+                .test("es-numero", "El valor debe ser un número válido (no letras, no menor a $1, ni mayor a $9.99,999)", value => {
                     const numero = Number(value.replace(/[.,]/g, ""));
-                    return !isNaN(numero);
+                    return !isNaN(numero) && numero>0 && numero<999999;
                 })
-                .min(1,"El valor mínimo que se le puede asignar a un producto es de $1")
-                .max(11,"El valor máximo que se le puede asignar a un producto es de $999.999")
                 .required("Debe ingresar el precio del producto"),
             stock: Yup.string()
                 .min(1, "Debe haber mínimo 1 en stock")
