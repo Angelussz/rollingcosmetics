@@ -10,7 +10,7 @@ import { AuthContext } from "../../context";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 export const ModalInciarSesion = ({ show, handleClose }) => {
-  const API = import.meta.env.VITE_API_BACK;
+  const API = import.meta.env.VITE_API;
   const [cargando, setCargando] = useState(false);
   const { setUsuarioActual, GuardarUsuario } = useContext(AuthContext);
   const EsquemaInicio = Yup.object().shape({
