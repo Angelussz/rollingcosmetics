@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "./context";
 
 const RollingCosmeticsApp = () => {
-  const { usuarioActual } = useContext(AuthContext);
+  const {usuarioActual} = useContext(AuthContext);
   return (
     <>
       <header style={{ position: "sticky", top: "0", zIndex: "10" }}>

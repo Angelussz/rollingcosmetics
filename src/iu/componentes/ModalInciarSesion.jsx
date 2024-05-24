@@ -33,7 +33,7 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
     onSubmit: async (valores) => {
       setCargando(true);
       Swal.fire({
-        title: "Inciando sesión...",
+        title: "Iniciando sesión...",
         allowEscapeKey: false,
         allowOutsideClick: false,
         showConfirmButton: false,
@@ -60,13 +60,16 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
         alert(`${error.response.data.mensaje}`);
         setCargando(false);
         Swal.close();
-        console.log(error)
+        
       }
     },
   });
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={()=>{
+      handleClose();
+      formik.resetForm();
+      }}>
       <Modal.Header closeButton>
         <Modal.Title>Login</Modal.Title>
       </Modal.Header>

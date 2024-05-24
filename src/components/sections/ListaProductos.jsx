@@ -13,7 +13,6 @@ const ListaProductos = () => {
         try {
             const response = await fetch(`${API}/productos`);
             const resJson = await response.json();
-
             setProductos(resJson);
         } catch (error) {
             console.error("ERROR ---> ",error);
@@ -30,13 +29,13 @@ const ListaProductos = () => {
 
     return (
         <>
-            <div className="p-4">
+            <div className="pb-4 px-4">
                 <div className="container-fluid"> 
                     <Row>
                         <Col xs={9}>
                             <h3 className="mb-3">Lista de Productos</h3>
                         </Col>   
-                        <Col xs={3}>
+                        <Col xs={3} className="d-flex justify-content-end mb-3">
                             <Button 
                                 variant="primary"
                                 onClick={()=>{
@@ -51,12 +50,13 @@ const ListaProductos = () => {
                 <Table responsive bordered hover >
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>ID</th> 
                             <th>Categoría</th>
                             <th>Nombre</th>
                             <th>Marca</th>
                             <th>Precio</th>
                             <th>Stock</th>
+                            <th>Fecha ultimo stock</th>
                             <th>Imagen</th>
                             <th>Descripción</th>
                             <th>Acciones</th>
@@ -65,8 +65,21 @@ const ListaProductos = () => {
                     <tbody>
                         {
                             productos.map((producto)=>{
+                                let fechaFor = "No especifica";
+                                if(producto.fecha){
+                                    const fechamod = producto.fecha;
+                                    
+                                    let fechaFinal = new Date(fechamod);
+                                    let fechaValida = fechaFinal.toISOString().slice(0, 10);
+                                    fechaValida = fechaValida.split("-");
+                                    fechaValida = fechaValida.reverse();
+
+                                    fechaFor = fechaValida.join("/");
+                                                                       
+                                }
+                                const nuevoProducto = {...producto,fecha:fechaFor};
                                 return (
-                                    <Producto key={producto._id} producto={producto} getProducto={getProducto} />
+                                    <Producto key={producto._id} producto={nuevoProducto} getProducto={getProducto} />
                                 )
                             })
                         }
