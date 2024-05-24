@@ -18,11 +18,9 @@ export const Busqueda = () => {
       const respuesta = await axios.get(
         `${API}/productos?busqueda=${busqueda}`
       );
-      console.log("RESPONSE AXIOS -->", respuesta);
-      // const produc = response.data;
       setProductos(respuesta.data);
     } catch (error) {
-      console.log("ERROR -->", error);
+      console.error(error);
     }
   };
   useEffect(() => {
@@ -35,21 +33,12 @@ export const Busqueda = () => {
 
   return (
     <>
-      {/* <div className="imagenBusqueda">
-        <img src="https://eldinero.com.do/wp-content/uploads/Bellezas.jpg" alt="Imagen de productos referencial" className="" />
-      </div> */}
       {productos.length > 0 ? (
         <Container className="my-3">
-          {/* <h1>Busqueda</h1>
-          <p>
-            Productos relacionados a{" "}
-            <span style={{ fontWeight: "bold" }}> {busqueda}</span>:
-          </p> */}
           <div className="fondoSecundario fondoSecundarioBusqueda py-2 my-3" style={{ borderRadius: "10px" }}>
             <h1 className="text-center"> RollingCosmetic </h1>
             <div className="ms-3">
               <h2>Búsqueda Relacionada</h2>
-              {/* <p>Productos relacionados a{" "} <span style={{ fontWeight: "bold" }}> {busqueda}</span>:</p> */}
               <p>Productos relacionados a{" "} <span className="textoBusqueda"> {busqueda}</span>:</p>
             </div>
           </div>
@@ -65,7 +54,6 @@ export const Busqueda = () => {
           <Spinner animation="border" />
         </div>
       )}
-      {/* <code>{JSON.stringify(productos)}</code> */}
     </>
   );
 };

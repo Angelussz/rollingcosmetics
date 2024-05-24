@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 export const ModalInciarSesion = ({ show, handleClose }) => {
   const API = import.meta.env.VITE_API_BACK;
   const [cargando, setCargando] = useState(false);
@@ -30,10 +31,9 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
     validateOnBlur: true,
     validateOnChange: true,
     onSubmit: async (valores) => {
-      // console.log("VALUES-->", valores);
       setCargando(true);
       Swal.fire({
-        title: "Inciando sesión...",
+        title: "Iniciando sesión...",
         allowEscapeKey: false,
         allowOutsideClick: false,
         showConfirmButton: false,
@@ -43,7 +43,6 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
       });
       try {
         const respuesta = await axios.post(`${API}/usuarios/login`, valores);
-        // console.log("respuesta login-->", response.data);
         
         if (respuesta.status === 200) {
           GuardarUsuario(respuesta.data);
@@ -61,13 +60,16 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
         alert(`${error.response.data.mensaje}`);
         setCargando(false);
         Swal.close();
-        console.log(error)
+        
       }
     },
   });
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={()=>{
+      handleClose();
+      formik.resetForm();
+      }}>
       <Modal.Header closeButton>
         <Modal.Title>Login</Modal.Title>
       </Modal.Header>
@@ -150,16 +152,8 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        {/* <Button variant="secondary" onClick={handleClose} disabled={cargando}>
-          Cerrar
-        </Button>
-        <Button
-          variant="primary"
-          onClick={handleIniciarSesion}
-          disabled={cargando}
-        >
-          Ingresar
-        </Button> */}
+        <p>No tienes cuenta aun?</p>
+        <Link to={"/registro"} onClick={()=>{handleClose()}} >Registrase</Link>
       </Modal.Footer>
     </Modal>
   );

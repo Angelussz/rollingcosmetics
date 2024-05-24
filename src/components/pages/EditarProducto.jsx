@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigate, useParams } from 'react-router';
 import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from "react";
