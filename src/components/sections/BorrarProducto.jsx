@@ -38,7 +38,7 @@ const BorrarProducto = ({ id, getProducto }) => {
 
     return (
         <div>
-            <Button type="button" variant="danger" onClick={ handleDelete }>
+            <Button type="button" variant="danger" className="me-2" onClick={ handleDelete }>
                 Eliminar
             </Button>
         </div>
