@@ -58,7 +58,6 @@ const ListaProductos = () => {
                             <th>Precio</th>
                             <th>Stock</th>
                             <th>Fecha ultimo stock</th>
-                            <th>Fecha ultimo stock</th>
                             <th>Imagen</th>
                             <th>Descripción</th>
                             <th>Acciones</th>
@@ -71,8 +70,13 @@ const ListaProductos = () => {
                                 if(producto.fecha){
                                     const fechamod = producto.fecha;
                                     
-                                    const fechaFinal = new Date(fechamod);
-                                    fechaFor = fechaFinal.toLocaleDateString()
+                                    let fechaFinal = new Date(fechamod);
+                                    let fechaValida = fechaFinal.toISOString().slice(0, 10);
+                                    fechaValida = fechaValida.split("-");
+                                    fechaValida = fechaValida.reverse();
+
+                                    fechaFor = fechaValida.join("/");
+                                                                       
                                 }
                                 const nuevoProducto = {...producto,fecha:fechaFor};
                                 return (

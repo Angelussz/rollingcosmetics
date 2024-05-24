@@ -32,6 +32,14 @@ export const EditarProducto = () => {
 
     useEffect(()=>{
         if (producto !== undefined) {
+            if(producto.fecha){
+                    const productoFecha = new Date(producto.fecha);
+                    producto.fecha = productoFecha.toISOString().slice(0, 10);
+                }
+            else{
+                producto.fecha = "";
+            }
+
             formik.setFieldValue("categoria",producto.categoria, true); 
             formik.setFieldValue("nombre", producto.nombre, true);
             formik.setFieldValue("marca", producto.marca, true);
@@ -118,6 +126,7 @@ export const EditarProducto = () => {
                     confirmButtonText: "Guardar"
                 }).then( async (result) => {
                     if (result.isConfirmed) {
+                        const formatoFecha = new Date(values.fecha);
                         const updateProduct = {
                             _id: producto._id,
                             categoria: values.categoria,         
@@ -125,7 +134,7 @@ export const EditarProducto = () => {
                             marca: values.marca,
                             precio: values.precio,
                             stock: values.stock,
-                            fecha: values.fecha,
+                            fecha: formatoFecha,
                             imagen: values.imagen,
                             descripcion: values.descripcion
                         };
@@ -149,8 +158,7 @@ export const EditarProducto = () => {
             }
         }
     });
-
-
+    // console.log({...formik.getFieldProps("fecha")})
     return (
         <div className="container-sm py-5">
             <Button 
