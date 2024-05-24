@@ -56,7 +56,7 @@ export const Contacto = () => {
         <section className="container-lg mb-4">
             <article className="row bg-gradient m-2 m-sm-4 p-2 p-sm-4 rounded shadow">
               <h1 className="display-3 fw-light text-center my-4">Contacto</h1>
-                <div className="col-md-6 mt-2 mb-2">
+                <div className="col-md-6 mt-2 mb-2 p-3">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.0614255919154!2d-65.26327859999999!3d-26.806172699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d21e9df306f%3A0xfb39f7d2f19ebe3!2sAv.%20Juan%20Domingo%20Per%C3%B3n%20123%2C%20Yerba%20Buena%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1705174657303!5m2!1ses-419!2sar" className="w-100 h-100" width="600" height="450">
                     </iframe>
