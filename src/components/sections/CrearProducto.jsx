@@ -32,7 +32,6 @@ const CrearProducto = () => {
                 .trim()
                 .matches(/^\d{1,3}(\.\d{3})*,\d{2}$/, "El formato del precio debe ser 'EJ: 4.000,00'")
                 .test("es-numero", "El valor debe ser un número válido", value => {
-                // Verifica que sea un número válido
                     const numero = Number(value.replace(/[.,]/g, ""));
                     return !isNaN(numero);
                 })
@@ -81,6 +80,8 @@ const CrearProducto = () => {
         validateOnBlur: true,
         validateOnChange: true,
         onSubmit: (values) => {  
+            const formatoFecha = new Date(values.fecha);
+            const fechaEnviar = {...values,fecha:formatoFecha}
             try {
                 Swal.fire({
                     title: "¿Desea guardar el producto?",
@@ -91,8 +92,7 @@ const CrearProducto = () => {
                     confirmButtonText: "Guardar"
                 }).then( async(result) => {
                     if (result.isConfirmed) {
-                        const response = await axios.post(`${API}/productos`, values);   
-                        console.log(values);
+                        const response = await axios.post(`${API}/productos`, fechaEnviar);   
                         if (response.status === 201) {  
                             formik.resetForm();    
                             Swal.fire({

@@ -14,7 +14,11 @@ const ListaProductos = () => {
         try {
             const response = await fetch(`${API}/productos`);
             const resJson = await response.json();
-
+            // const fechamod = resJson[27].fecha;
+            // console.log(fechamod)
+            // const fechaFinal = new Date(fechamod);
+            // console.log(fechaFinal.getDate())
+            // console.log(`${fechaFinal.toLocaleDateString()} ${fechaFinal.toLocaleTimeString()}`)
             setProductos(resJson);
         } catch (error) {
             console.error("ERROR ---> ",error);
@@ -58,7 +62,7 @@ const ListaProductos = () => {
                             <th>Marca</th>
                             <th>Precio</th>
                             <th>Stock</th>
-                            <th>Fecha</th>
+                            <th>Fecha ultimo stock</th>
                             <th>Imagen</th>
                             <th>Descripción</th>
                             <th>Acciones</th>
@@ -67,8 +71,16 @@ const ListaProductos = () => {
                     <tbody>
                         {
                             productos.map((producto)=>{
+                                let fechaFor = "No especifica";
+                                if(producto.fecha){
+                                    const fechamod = producto.fecha;
+                                    
+                                    const fechaFinal = new Date(fechamod);
+                                    fechaFor = fechaFinal.toLocaleDateString()
+                                }
+                                const nuevoProducto = {...producto,fecha:fechaFor};
                                 return (
-                                    <Producto key={producto._id} producto={producto} getProducto={getProducto} />
+                                    <Producto key={producto._id} producto={nuevoProducto} getProducto={getProducto} />
                                 )
                             })
                         }
