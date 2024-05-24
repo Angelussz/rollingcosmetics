@@ -75,16 +75,7 @@ const ListaProductos = () => {
                                     fechaFor = fechaFinal.toLocaleDateString()
                                 }
                                 const nuevoProducto = {...producto,fecha:fechaFor};
-                                let fechaFor = "No especifica";
-                                if(producto.fecha){
-                                    const fechamod = producto.fecha;
-                                    
-                                    const fechaFinal = new Date(fechamod);
-                                    fechaFor = fechaFinal.toLocaleDateString()
-                                }
-                                const nuevoProducto = {...producto,fecha:fechaFor};
                                 return (
-                                    <Producto key={producto._id} producto={nuevoProducto} getProducto={getProducto} />
                                     <Producto key={producto._id} producto={nuevoProducto} getProducto={getProducto} />
                                 )
                             })
