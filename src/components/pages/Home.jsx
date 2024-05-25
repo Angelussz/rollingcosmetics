@@ -8,8 +8,9 @@ import "../pages/estilos/home.css";
 import Slider1 from "../../../public/imagenes/Slider1.png";
 import Slider2 from "../../../public/imagenes/Slider2.png";
 import Slider3 from "../../../public/imagenes/Slider3.png";
-// import Publicidad1 from "../../../public/imagenes/Publicidad1.jpeg";
-// import Publicidad2 from "../../../public/imagenes/Publicidad2.png";
+
+import Publicidad1 from "../../../public/imagenes/Publi1.jpeg";
+import Publicidad2 from "../../../public/imagenes/Publi2.png";
 
 export const Home = () => {
   const API = import.meta.env.VITE_API;
