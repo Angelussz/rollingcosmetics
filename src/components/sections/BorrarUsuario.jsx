@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import Swal from 'sweetalert2';
 import axios from "axios";
 
-const BorrarUsuario = ({ id, getUsuario }) => {
+const BorrarUsuario = ({ id, getUsuario,rol }) => {
     const API = import.meta.env.VITE_API;
 
     const handleDelete = () => {
@@ -17,6 +17,9 @@ const BorrarUsuario = ({ id, getUsuario }) => {
                 confirmButtonText: "Eliminar",
                 cancelButtonColor: "#3085d6"
             }).then(async (result) => {
+                if(rol === "Admin"){
+                    return;
+                }
                 if (result.isConfirmed) {
 
                     await axios.delete(`${API}/usuarios/` + id);
@@ -38,7 +41,7 @@ const BorrarUsuario = ({ id, getUsuario }) => {
 
     return (
         <div>
-            <Button type="button" variant="danger" onClick={ handleDelete }>
+            <Button type="button" variant="danger" onClick={ handleDelete } disabled={rol === "Admin"} >
                 Eliminar
             </Button>
         </div>

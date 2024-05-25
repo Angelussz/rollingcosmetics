@@ -10,7 +10,7 @@ import Spinner from "react-bootstrap/Spinner";
 import "./estilos/busqueda.css"
 
 export const Busqueda = () => {
-  const API = import.meta.env.VITE_API_BACK;
+  const API = import.meta.env.VITE_API;
   const { busqueda } = useParams();
   const [productos, setProductos] = useState([]);
   const getProductos = async () => {

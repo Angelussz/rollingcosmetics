@@ -7,7 +7,7 @@ export const RutasProtegida = ({
   children
 }) => {
   if(!esPermitida){
-    return <Error404/>
+    return <Navigate to={"/"}/>
     
   }
   return children?children: <Outlet />

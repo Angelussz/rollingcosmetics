@@ -201,7 +201,7 @@ const Registro = () => {
                     <img className='imagenRegistro sombra' src="https://ganapromo.com/wp-content/uploads/2022/01/loreal-gana-kit.jpeg" alt="imagen de registro" />
                 </div>
             </div>
-            {/* Modales */}
+            
             <Modal show={showSuccessModal} onHide={handleCloseSuccessModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Éxito - Usuario creado correctamente</Modal.Title>

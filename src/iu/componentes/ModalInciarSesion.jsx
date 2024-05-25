@@ -10,7 +10,7 @@ import { AuthContext } from "../../context";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 export const ModalInciarSesion = ({ show, handleClose }) => {
-  const API = import.meta.env.VITE_API_BACK;
+  const API = import.meta.env.VITE_API;
   const [cargando, setCargando] = useState(false);
   const { setUsuarioActual, GuardarUsuario } = useContext(AuthContext);
   const EsquemaInicio = Yup.object().shape({
@@ -33,7 +33,7 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
     onSubmit: async (valores) => {
       setCargando(true);
       Swal.fire({
-        title: "Inciando sesión...",
+        title: "Iniciando sesión...",
         allowEscapeKey: false,
         allowOutsideClick: false,
         showConfirmButton: false,
@@ -60,13 +60,16 @@ export const ModalInciarSesion = ({ show, handleClose }) => {
         alert(`${error.response.data.mensaje}`);
         setCargando(false);
         Swal.close();
-        console.log(error)
+        
       }
     },
   });
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={()=>{
+      handleClose();
+      formik.resetForm();
+      }}>
       <Modal.Header closeButton>
         <Modal.Title>Login</Modal.Title>
       </Modal.Header>

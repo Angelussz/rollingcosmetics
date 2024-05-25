@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import axios from 'axios';
 export const AuthProvider = ({ children }) => {
-  const [usuarioActual, setUsuarioActual] = useState(undefined);
+  const [usuarioActual, setUsuarioActual] = useState(
+    JSON.parse(sessionStorage.getItem("auth"))?JSON.parse(sessionStorage.getItem("auth")):undefined
+  );
   const GuardarUsuario = (auth) => {
     sessionStorage.setItem("auth", JSON.stringify(auth));
   };

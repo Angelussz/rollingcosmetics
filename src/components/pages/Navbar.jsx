@@ -23,7 +23,7 @@ const Navbarr = () => {
     navigate("/")
   };
   return (
-    <Navbar expand="lg" className="bg-danger" data-bs-theme="dark" >
+    <Navbar expand="lg" className="bg-danger justify-content-around" data-bs-theme="dark" >
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Col lg={{ order: "last" }}>

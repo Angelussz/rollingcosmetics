@@ -6,7 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 export const ModalBusqueda = ({ show, handleClose }) => {
-  const API = import.meta.env.VITE_API_BACK;
+  const API = import.meta.env.VITE_API;
   const [productosEncontrados, setProductosEncontrados] = useState([]);
   const navigate = useNavigate();
   const [busquedaUrl, setBusquedaUrl] = useState("");
