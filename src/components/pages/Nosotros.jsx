@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin  } from "react-icons/fa6";
-import juan from "../../../public/imagenes/juan_illa.png";
-import facundo from "../../../public/imagenes/facundo_palacios.png";
-import angelo from "../../../public/imagenes/angelo_perez.png";
+import juan from "/imagenes/juan_illa.png";
+import facundo from "/imagenes/facundo_palacios.png";
+import angelo from "/imagenes/angelo_perez.png";
 import "../../css/nosotros.css";
 
 

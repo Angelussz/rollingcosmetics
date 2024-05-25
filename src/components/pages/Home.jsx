@@ -5,12 +5,12 @@ import TarjetaProducto from "../../iu/componentes/TarjetaProducto";
 import TarjetaProductoSlider from "../../iu/componentes/tarjetaProductoSlider";
 import Carousel from 'react-bootstrap/Carousel';
 import "../pages/estilos/home.css";
-import Slider1 from "../../../public/imagenes/Slider1.png";
-import Slider2 from "../../../public/imagenes/Slider2.png";
-import Slider3 from "../../../public/imagenes/Slider3.png";
+import Slider1 from "/imagenes/Slider1.png";
+import Slider2 from "/imagenes/Slider2.png";
+import Slider3 from "/imagenes/Slider3.png";
 
-import Publicidad1 from "../../../public/imagenes/Publi1.jpeg";
-import Publicidad2 from "../../../public/imagenes/Publi2.png";
+import Publicidad1 from "/imagenes/Publi1.jpeg";
+import Publicidad2 from "/imagenes/Publi2.png";
 
 export const Home = () => {
   const API = import.meta.env.VITE_API;
