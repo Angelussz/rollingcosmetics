@@ -29,7 +29,7 @@ export const Destacados = () => {
     <>
       <div>
         <div>
-          <img src="../../../public/imagenes/BannerProductosDestacados.png" className="d-block w-100" alt="Imagen de ofertas de productos destacados" />
+          <img src="/imagenes/BannerProductosDestacados.png" className="d-block w-100" alt="Imagen de ofertas de productos destacados" />
         </div>
         <Container className="my-3">
           <div className="fondoSecundario fondoSecundarioBusqueda py-2 my-3" style={{ borderRadius: "10px" }}>

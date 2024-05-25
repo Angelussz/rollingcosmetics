@@ -154,7 +154,6 @@ export const EditarProducto = () => {
             }
         }
     });
-    // console.log({...formik.getFieldProps("fecha")})
     return (
         <div className="container-sm py-5">
             <Button 

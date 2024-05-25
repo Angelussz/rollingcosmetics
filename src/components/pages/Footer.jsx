@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import iconoFacebook from "../../../public/imagenes/facebookicon.png";
-import iconoInstagram from "../../../public/imagenes/instagramicon.png";
-import iconoTwitter from "../../../public/imagenes/twitterxicon.png";
-import dataFiscal from "../../../public/imagenes/data-fiscal.png";
-import logo from "../../../public/imagenes/rollingCosmeticsLogo2.png";
+import iconoFacebook from "/imagenes/facebookicon.png";
+import iconoInstagram from "/imagenes/instagramicon.png";
+import iconoTwitter from "/imagenes/twitterxicon.png";
+import dataFiscal from "/imagenes/data-fiscal.png";
+import logo from "/imagenes/rollingCosmeticsLogo2.png";
 import "../../css/footer.css";
 
 

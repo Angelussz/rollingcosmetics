@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import ImagenProductos from "../../../public/imagenes/rollingCosmeticsLogo.png";
+import ImagenProductos from "/imagenes/rollingCosmeticsLogo.png";
 import TarjetaProducto from "../../iu/componentes/TarjetaProducto";
 import Spinner from "react-bootstrap/Spinner";
 import "./estilos/busqueda.css"

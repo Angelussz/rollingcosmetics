@@ -1,4 +1,4 @@
-import Imagen from "../../../public/imagenes/error404.jpeg";
+import Imagen from "/imagenes/error404.jpeg";
 import { useNavigate } from "react-router";
 import { Button } from "react-bootstrap";
 

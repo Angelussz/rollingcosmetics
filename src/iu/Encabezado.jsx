@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-import iconoFacebook from "../../public/imagenes/facebookicon.png";
-import iconoInstagram from "../../public/imagenes/instagramicon.png";
-import iconoTwitter from "../../public/imagenes/twitterxicon.png";
-import logoApp from "../../public/imagenes/rollingCosmeticsLogo2.png";
+import iconoFacebook from "/imagenes/facebookicon.png";
+import iconoInstagram from "/imagenes/instagramicon.png";
+import iconoTwitter from "/imagenes/twitterxicon.png";
+import logoApp from "/imagenes/rollingCosmeticsLogo2.png";
 import { IoSearchSharp } from "react-icons/io5";
 
 import "./estilos/encabezado.css";

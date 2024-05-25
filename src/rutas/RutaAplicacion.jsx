@@ -22,7 +22,6 @@ export const RutaAplicacion = () => {
         
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
         <Route path="/registro" element={ usuarioActual=== undefined?<Registro />:<Navigate to={"/"}/>} />
-        {console.log(usuarioActual)}
         <Route
           element={
             <RutasProtegida
