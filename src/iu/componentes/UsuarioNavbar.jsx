@@ -8,7 +8,7 @@ export const UsuarioNavbar = ({usuarioActual,cerrarSesion}) => {
       </div>
       <div className="ms-2">
         <h3 className="ms-2 mb-1 fw-semibold fs-5 text-light">
-          {usuarioActual.nombre}
+          {usuarioActual?.nombre}
         </h3>
         <Button variant="primary" onClick={cerrarSesion} size="sm">
           Cerrar Sesión

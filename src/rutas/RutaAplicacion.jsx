@@ -19,10 +19,10 @@ export const RutaAplicacion = () => {
         <Route path="/busqueda/:busqueda" element={<Busqueda />} />
         <Route path="/contacto" element={<Contacto/>} />
         <Route path="/nosotros" element={<Nosotros/>} />
-        <Route path="/*" element={<Error404/>} />
+        
         <Route path="/descripcion/:id" element={<DescripcionProducto />} />
         <Route path="/registro" element={ usuarioActual=== undefined?<Registro />:<Navigate to={"/"}/>} />
-        
+        {console.log(usuarioActual)}
         <Route
           element={
             <RutasProtegida
@@ -34,17 +34,8 @@ export const RutaAplicacion = () => {
           <Route path="/administracion" element={<Administracion />} />
           <Route path="/editar/:id" element={<EditarProducto />} />
         </Route>
-        <Route path="/favoritos"
-          element={
-            <RutasProtegida
-              esPermitida={!!usuarioActual && usuarioActual?.rol === "Usuario"}
-            >
-              <Favoritos />
-            </RutasProtegida>
-          }
-        >
-        </Route>
-        <Route path="/*" element={<div><h1>Pagina Error</h1></div>} />
+        
+        <Route path="/*" element={<Error404/>} />
       </Routes>
     </>
   );

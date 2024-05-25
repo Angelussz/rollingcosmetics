@@ -116,7 +116,7 @@ export const Home = () => {
               </div>
               <div className="publicidad mt-5">
                 <div className="">Te puede interesar también:</div>
-                {/* <a href="https://www.google.com"><img src={Publicidad1} alt="Publicidad" /></a> */}
+                <a href="https://www.google.com"><img src={Publicidad1} alt="Publicidad" /></a>
               </div>
             </div>
             <div className="box2 grillaContenedor d-flex my-5 margen">
@@ -134,7 +134,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="d-flex  fondoSecundario align-items-center my-2">
-        {/* <img src={Publicidad2} className="imagenPublicidad marcoPublicidad" alt="Publicidad" /> */}
+        <img src={Publicidad2} className="imagenPublicidad marcoPublicidad" alt="Publicidad" />
       </div>
     </div>
   )
