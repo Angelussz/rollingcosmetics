@@ -9,7 +9,7 @@ import Slider1 from "/imagenes/Slider1.png";
 import Slider2 from "/imagenes/Slider2.png";
 import Slider3 from "/imagenes/Slider3.png";
 
-import Publicidad1 from "/imagenes/Publi1.jpeg";
+import Publicidad1 from "/imagenes/Publi1.png";
 import Publicidad2 from "/imagenes/Publi2.png";
 
 export const Home = () => {
