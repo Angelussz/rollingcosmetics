@@ -13,7 +13,9 @@ const Footer = () => {
             <div className="">
                 <div className="row pb-4 pt-lg-5 custom-footer mt-5">
                     <div className="d-flex col-lg-4 justify-content-center">
-                        <img src={logo} alt="Rolling Cosmetics" className="custom-logo my-auto" />
+                        <Link to={"/"} className="text-decoration-none text-light custom-links mb-2">
+                            <img src={logo} alt="Rolling Cosmetics" className="custom-logo my-auto" />
+                        </Link>
                     </div>
                     <div className="d-flex col-lg-2 flex-column justify-content-center text-center text-lg-start">
                         <Link to={"/"} className="text-decoration-none text-light custom-links mb-2">Inicio</Link>
