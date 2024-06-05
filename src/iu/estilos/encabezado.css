@@ -3,7 +3,7 @@
     height: 50px;
 }
 .t-logo{
-    width: 200px;
+    width: 100px;
 }
 .gradiente{
     background: linear-gradient(0deg, var(--color-950), white 140%) no-repeat;
